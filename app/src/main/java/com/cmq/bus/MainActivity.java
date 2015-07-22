@@ -11,6 +11,7 @@ import com.cmq.bus.eventBus.EventBusActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import de.greenrobot.event.EventBus;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.eventBus)
     public void onEventBus(View view){
-       startActivity(new Intent(this, EventBusActivity.class));
+        MessageEvent event = new MessageEvent();
+        event.msg = "I'm from MainActivity";
+        EventBus.getDefault().postSticky(event);
+        startActivity(new Intent(this, EventBusActivity.class));
     }
 
     @OnClick(R.id.otto)

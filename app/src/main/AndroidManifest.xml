@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".eventBus.EventBusActivity"/>
+        <activity android:name=".eventBus.EventBus2Activity"/>
     </application>
 
 </manifest>
