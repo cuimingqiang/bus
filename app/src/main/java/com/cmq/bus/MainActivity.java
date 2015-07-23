@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.cmq.bus.eventBus.EventBusActivity;
 
+import butterknife.BindInt;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.greenrobot.event.EventBus;
